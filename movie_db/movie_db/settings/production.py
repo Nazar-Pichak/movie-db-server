@@ -29,4 +29,4 @@ CSRF_TRUSTED_ORIGINS = [
     "https://movie-db-client.vercel.app/movies"
 ]
 
-STATIC_ROOT = BASE_DIR.parent / "static"
+STATIC_ROOT = os.path.join(BASE_DIR.parent, 'staticfiles')
