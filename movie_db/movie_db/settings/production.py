@@ -31,6 +31,8 @@ CORS_ALLOWED_ORIGINS = [
     "https://nazar2025.pythonanywhere.com"
 ]
 
+CORS_ALLOW_CREDENTIALS = True
+
 CSRF_TRUSTED_ORIGINS = [
     "https://movie-db-client.vercel.app"
 ]
