@@ -21,5 +21,6 @@ DATABASES = {
 
 CORS_ALLOW_ALL_ORIGINS = True
 CSRF_TRUSTED_ORIGINS = [
-    "https://movie-db-client.vercel.app/movies"
+    "http://localhost:3000",
+    "http://127.0.1:3000",
 ]
