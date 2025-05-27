@@ -24,9 +24,15 @@ DATABASES = {
 }
 
 
-CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_ALL_ORIGINS = False
+
+CORS_ALLOWED_ORIGINS = [
+    "https://movie-db-client.vercel.app",
+    "https://nazar2025.pythonanywhere.com"
+]
+
 CSRF_TRUSTED_ORIGINS = [
-    "https://movie-db-client.vercel.app/movies/"
+    "https://movie-db-client.vercel.app"
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR.parent, 'staticfiles')
