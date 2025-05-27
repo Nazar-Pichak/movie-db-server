@@ -5,8 +5,10 @@ from rest_framework.routers import DefaultRouter
 from .views.person_views import ActorListView, DirectorListView
 from .views.auth_views import RegisterUserView, AuthView
 from .views.movie_views import MovieViewSet, get_genres
+from .views.api_root_view import CustomAPIRootView
 
 class CustomRouter(DefaultRouter):
+    
     def __init__(self):
         super().__init__()
         self.trailing_slash = '/?'
@@ -17,6 +19,7 @@ router.register(r'people', PersonViewSet, basename='person')
 router.register(r'movies', MovieViewSet, basename='movie')
 
 urlpatterns = [
+    path('', CustomAPIRootView.as_view(), name='api-root'),
     path('', include(router.urls)),
     path('actors/', ActorListView.as_view(), name='actors'),
     path('directors/', DirectorListView.as_view(), name='directors'),
